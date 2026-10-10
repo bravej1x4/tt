@@ -5,6 +5,9 @@ html{
     font-weight: 700;
     font-size: 20px;
     word-break: keep-all;
+    font-optical-sizing: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ::selection{
@@ -34,24 +37,36 @@ header{
     padding-bottom: 12px;
 }
 
-/* 
-nav ul{
-    display: flex;
-    gap: 20px;
+
+#theme-toggle-input{
+    display: none;
 }
 
-nav a{
-    display: inline-block;
+#theme-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 2px;
+    cursor: pointer;
+}
 
-    text-decoration: none;
-    color: black;
+#theme-toggle-icon{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
 
-    transition: transform 0.3s ease;
-
-    &:hover{
-        transform: translateY(-2px);
-    }
-} */
+#theme-toggle-input:checked + #theme-toggle #theme-toggle-icon{
+    background-color: white;
+    border: 1px solid black;
+}
 
 :where(main){
     padding: 12px 0;
@@ -165,6 +180,53 @@ tr{
 td{
     padding: 6px 0;
 }
+
+
+/* for 2nd activity */
+
+body:has( #theme-toggle-input:not(:checked)) tr[data-activity="2"]{
+    color: white;
+
+    &:hover{
+        color: lime;
+    }
+}
+
+body:has( #theme-toggle-input:checked){
+    background-color: black;
+    
+    & *{
+        border-color: white;
+    }
+    & a{
+        color: white;
+    }
+    & main{
+        background-color: black;
+        color: white;
+    }
+    & footer{
+        color: white;
+    }
+    & tr[data-activity="2"]{
+        --base-color: white;
+        animation: second-activity-light 0.5s infinite alternate ease-in-out;
+    }
+    & tr[data-activity="2"]:hover{
+        --base-color: black;
+        animation: second-activity-light 0.5s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes second-activity-light {
+    0%{
+        color: var(--base-color);
+    }
+    100%{
+        color: lime;
+    }
+}
+
 
 footer{
     /* min-height: 100vh; */

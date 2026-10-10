@@ -11,7 +11,6 @@ html{
     background-color: greenyellow;
 }
 
-
 a{
     text-underline-offset: 2px;
     text-decoration: underline dotted;
@@ -54,7 +53,7 @@ nav a{
     }
 } */
 
-main{
+:where(main){
     padding: 12px 0;
     background-color: white;
 }

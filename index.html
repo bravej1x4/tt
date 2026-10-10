@@ -8,11 +8,18 @@
     <script type="module" src="script.js"></script>
     <title>t/t</title>
 </head>
-<body>
+<body data-theme="light">
     <header>
         <a href="./">
             <h1 data-torph-title="table/table">t/t</h1>
         </a>
+
+        <div id="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle-input">
+            <label for="theme-toggle-input" id="theme-toggle">
+                <div id="theme-toggle-icon"></div>
+            </label>
+        </div>
     </header>
     <main>
         <section id="about">
@@ -74,17 +81,45 @@
         <section id="activity">
             <h2>Activities</h2>
             <table>
-                <tr data-status="active" onclick="window.location.href='./activities/1st/index.html'">
-                    <td>2026. 09. 06.</td>
-                    <td>내가 웹사이트를 좋아하는 이유</td>
-                    <td>각자 자신이 웹사이트를 좋아하는 이유를 작성하고 공유하였다</td>
+                <tr data-status="disabled" data-activity="4">
+                    <td>2026. 10. 24.</td>
+                    <td>스크롤</td>
+                    <td>진행 전</td>
+                </tr>
+                <tr data-status="active" data-activity="3" onclick="window.location.href='./activities/1st/index.html'">
+                    <td>2026. 10. 10.</td>
+                    <td>CSS 선택자</td>
+                    <td>각자 CSS 선택자를 탐구하고 공유했다.</td>
                     <td>›</td>
                 </tr>
-                <tr data-status="disabled">
+                <tr data-status="active" data-activity="2" onclick="window.location.href='https://eeanzn.github.io/howtoread-mode-/'">
+                    <td>2026. 09. 20.</td>
+                    <td>모드 메이킹</td>
+                    <td>이현준이 How to read(mode)를 공유했다.</td>
+                    <td>›</td>
+                </tr>
+                <tr data-status="active" data-activity="2" onclick="window.location.href='https://hyuk.xyz/lorem-ipsum/'">
+                    <td>2026. 09. 20.</td>
+                    <td>모드 메이킹</td>
+                    <td>장혁이 Lorem Ipsum을 공유했다.</td>
+                    <td>›</td>
+                </tr>
+                <tr data-status="active" data-activity="2" onclick="window.location.href='https://versync.net/individual/deviceandmode/index.html'">
+                    <td>2026. 09. 20.</td>
+                    <td>모드 메이킹</td>
+                    <td>정용기가 기기와 모드를 공유했다.</td>
+                    <td>›</td>
+                </tr>
+                <tr data-status="active" data-activity="1" onclick="window.location.href='./activities/1st/index.html'">
+                    <td>2026. 09. 06.</td>
+                    <td>내가 웹사이트를 좋아하는 이유</td>
+                    <td>각자 자신이 웹사이트를 좋아하는 이유를 작성하고 공유했다.</td>
+                    <td>›</td>
+                </tr>
+                <tr data-status="disabled" data-activity="0">
                     <td>2026. 08. 29.</td>
                     <td>Hello, table/table!</td>
-                    <td>이현준, 장혁, 정용기가 모여서 t/t를 결성하였다</td>
-                    <td>›</td>
+                    <td>이현준, 장혁, 정용기가 모여서 t/t를 결성했다.</td>
                 </tr>
             </table>
 

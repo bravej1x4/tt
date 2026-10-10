@@ -1,0 +1,237 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+html{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    word-break: keep-all;
+}
+
+::selection{
+    background-color: greenyellow;
+}
+
+
+a{
+    text-underline-offset: 2px;
+    text-decoration: underline dotted;
+    color: black;
+
+    &:hover{
+        text-decoration: underline solid;
+    }
+}
+
+body{
+    padding: 12px 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid black;
+    padding-bottom: 12px;
+}
+
+/* 
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    display: inline-block;
+
+    text-decoration: none;
+    color: black;
+
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: translateY(-2px);
+    }
+} */
+
+main{
+    padding: 12px 0;
+    background-color: white;
+}
+
+#about{
+    display: flex;
+
+    gap: 52px;
+
+    & article{
+        width: 70%;
+        max-width: 1024px;
+    }
+}
+
+p{
+    line-height: 160%;
+    margin-bottom: 1lh;
+}
+p[data-lang="en"],
+a[data-lang="en"]{
+    line-height: 135%;
+}
+
+sup{
+    /* font-size: 12px; */
+    /* vertical-align: super; */
+    /* margin-left: 1.5px; */
+    /* margin-right: 1.5px; */
+}
+
+.footnote{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    max-width: 500px;
+
+    /* margin-top: 52px; */
+
+    /* border-top: 1px dashed black; */
+    /* padding-top: 12px; */
+    
+    font-size: 12px;
+    line-height: 180%;
+}
+
+.footnote span{
+    display: block;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+
+    /* width: 16px; */
+    /* height: 16px; */
+
+
+    /* padding: 4px 2px; */
+    /* border-radius: 2px; */
+    
+    
+    /* background-color: black; */
+    /* color: white; */
+    /* aspect-ratio: 1/1; */
+}
+
+#activity{
+    padding: 52px 0;
+    /* border-bottom: 1px dashed black; */
+    /* background-color: #f0f0f0; */
+}
+
+#activity h2{
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed black;
+}
+
+table{
+    width: 100%;
+
+    font-size: 18.5px;
+
+    & a{
+        text-decoration: none;
+    }
+}
+
+tr{
+    cursor: pointer;
+
+    &[data-status="disabled"]{
+        color: #ccc;
+        cursor: default;
+    }
+    &[data-status="disabled"] a{
+        pointer-events: none;
+    }
+
+    &[data-status="active"]:hover{
+        background-color: Lime;
+    }
+
+    & a{
+        color: unset;
+    }
+}
+
+td{
+    padding: 6px 0;
+}
+
+footer{
+    /* min-height: 100vh; */
+    /* background: radial-gradient(circle at center, lime, white); */
+
+    padding-bottom: 10px;
+
+    z-index: -1;
+
+    /* & nav{
+        margin-top: 52px;
+    } */
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.footer-title{
+    font-size: 10vw;
+}
+
+
+.footer-nav-content{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    
+    /* gap: 12px; */
+
+    font-size: 12px;
+}
+
+.footer-nav-content-item{
+    display: flex;
+    gap: 12px;
+}
+
+.footer-nav{
+    display: flex;
+    gap: 12px;
+    /* width: 300px; */
+    padding-left: 12px;
+    border-left: 1px solid black;
+}
+
+.footer-nav ul{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 12px;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    #about{
+        flex-direction: column;
+
+        & article{
+            width: 100%;
+        }
+    }
+}

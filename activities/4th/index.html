@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/tt/reset.css">
+    <link rel="stylesheet" href="/tt/style.css">
+    <script type="module" src="/tt/script.js"></script>
+    <title>4. 스크롤</title>
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+        html{
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            font-weight: 700;
+            word-break: keep-all;
+            font-optical-sizing: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h6, ul {
+            margin: 0;
+            color: black;
+            &:hover{
+            color: lime;
+            }
+        }
+
+        #container-a {
+            height: auto;
+        }
+
+        #container-b {
+            position: sticky;
+            top: 0;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            flex: none;
+            padding: 16px 20px;
+            margin-top: 0px;
+            position: fixed;
+        }
+
+        footer {
+            flex: none;
+            padding: 16px 20px;
+            bottom: 0px;
+            position: fixed;
+        }
+
+        main{
+            display: flex;
+            justify-content: left;
+            flex: 1;
+            min-height: 0;
+            container-type: size;
+            display: flex;
+            align-items: center;  
+            padding-bottom: 10dvh;
+        }
+
+        #track {
+            display: flex;
+            width: max-content;
+            animation: by-time 45s linear infinite;  
+        }
+
+        @keyframes by-time {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .link {
+            font-size: 80cqh;
+            line-height: 1;
+            white-space: nowrap;
+            padding: 0 10vh;
+            letter-spacing: -0.1em;
+            text-box: trim-both cap alphabetic;
+        }
+
+        a,
+        a:visited {
+            color: black;
+            text-decoration: dashed underline;
+
+            &:hover{
+            color: lime;
+            }
+        }
+
+        ::selection {
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container-a">
+        <div id="container-b">
+            <header>
+                <a href="/tt">
+                    <h1 data-torph-title="table/table">t/t</h1>
+                </a>
+            </header>
+            <main>
+                <div id="scroller">
+                    <div id="track">
+                        <span class="link"><a href="https://versync.net/individual/howtogetscrollamount/index.html" target="_blank">https://versync.net/individual/howtogetscrollamount/index.html</a></span>
+                        <span class="link"><a href="https://hyuk.xyz/scroll/" target="_blank">https://hyuk.xyz/scroll/</a></span>
+                        <span class="link"><a href="https://eeanzn.github.io/scrolling.../" target="_blank"tabindex="-1">https://eeanzn.github.io/scrolling.../</a></span>
+                        <span class="link" aria-hidden="true"><a href="https://versync.net/individual/howtogetscrollamount/index.html" target="_blank" tabindex="-1">https://versync.net/individual/howtogetscrollamount/index.html</a></span>
+                        <span class="link" aria-hidden="true"><a href="https://hyuk.xyz/scroll/" target="_blank" tabindex="-1">https://hyuk.xyz/scroll/</a></span>
+                        <span class="link" aria-hidden="true"><a href="https://eeanzn.github.io/scrolling.../" target="_blank" tabindex="-1">https://eeanzn.github.io/scrolling.../</a></span>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+               <div class="footer-nav-content">
+                    <div class="footer-nav-content-item">
+                        <span class="footer-copyright">© 2026 table/table. All rights reserved.</span>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="/tt">Home</a></li>
+                                <li><a href="https://www.instagram.com/t_t_study/" target="_blank">Instagram</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
